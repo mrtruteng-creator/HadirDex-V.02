@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HadirDex</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAflBMVEVtbm9SWlwhJCWVo6jW6+08QkM/Pz85PkAAAP9yfYF1eHoBAQEAAAD7+/sXGBgnJydHR0f///82NjZVVVVmZmZ5eXnX19e4uLiXl5fk5OSnp6fHx8eFhYUjJygwNTZCSEkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnFfg/AAAAIHRSTlMJZuApFYwEigE9rf4A//v//wL///////////7//9OyiLLrkp4AAAQ1SURBVHjarVeJlqsoEMUs3fOGUCAoiprk//9yir1UOjNz3qNPp0NrXWq5tcAep9WHj2t3fz0vgOvyfN27a18e7Rdrife/7k/guwXP+6++BcHOmLfuKJ0xutu/aYC727spnTDet4bIzoDuwj+uS9d/0uD6ah27376uPwAgckfeBc210viplMSdJE866ktG5N/0UG244UoiAP5wNUhZ0d8EgZW//SsLa4MiUnkNuAGlUNIMXIEGlc3oiWA6P8vzAcAM8uQIDwSGa8gI/cGEKA8SX+SyGUKJtkiEjwh7E76i/RK196+VpTdrN01QjOZjVOKNQgWAPbpwxgBc1dPV7ITdNivcrKolEv0ZtOiyrP+9QvCaMtnTYCYh1jGgyXEVYiKPIEb2moQffz16Tz+N4vF4OXiJgZBCDh4vu1ZJHxh+6VHUAyQDvArhPNR5MaeEALOgRVEnFU3qonT/uAE1m1icjjcmBS94hTjk9vB8YJmBEJymDyfL1U2TFRZKXPAIyIxEcVYUUGI8E0CKxT8eRbVJjkIVFRj7Sh5ACroGfayNfzeK7Yb0pXt8oQ+eabfZs7wW6V1NAeyWvjyDD/K/5/UMMAjVUGud8zfvwu+8WaYWwNgAmJb87fvBigVNACWc/ATw7NkVPgFwDKD+AABX1vGPANKJ7McWAO/Y9wkAc0UZv4bZ5wxmwfwzwJ3VOlyioJxYZr9c0H7GPJI/RIG/WPEh4cEoooDWKRTC7aJZeIBeZLWRVCaOYu84bfeOcHVzYZXjRpwBsuroCKKDMDXLCYAW8ggwaI79QEqJCA5qgukmAJRDMoBEW5UV6zRJcNUIRVKTAnA3HgBmEywzMRaFJiNJWyBOrOEtUeC+scWjlbAtxl1IGCvyKObNr3GcbQbQwjWiiGF80eSHDLANYZlhOmsANCAvdufn8GQTsLlid84+mE/hDlTuKMenvROVDe8PMal0K+k6ks6eswce+PSQC26krZWFkhLTuSdehGRDZeLssFKD3kSVN4QFvqDUkuZtWI+5oCaHFUEsNR1XasE3LaqVzaOQu8EAd0Y2eByLKrWB28ClhWQL8lmGICbFF1r8fVmvjSVGW/rmvE6GJOkQPtekAK0MvrEw0luThbAbDhMPxpgLE20eobXV5pq8YE6VPYZtE4tXhHogNNddew/vwREgQc5ig119Te29DBjZj4cOZwpxsKjsnqUBI484td7sqjgWFKsgd5mNzt15xElDFtGZ9sNQ0jLDHXlUh6yTEabZUVHeAEkJMuaVQbMizGf52TsT1vxoN2jWUbcE89CLcFRKDNqE8+PeYdSlw3Y0cN2bMYi1DJrjtIx/n4ZtdkBAi22hlLEHr5zH/cOFI5y0CBsYMNg4qZGrV+PCcbryeLuxLy8Ldve9P3648jQvXYCJOfzXS9cfufb9/sXzd6++f+by/f+u//8AX7zLnWpXQqAAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="theme-color" content="#0B1210">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root{
+  --logo:url("data:image/png;base64,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");
+  --bg:#0B1210; --panel:#14211D; --panel2:#1A2925; --line:#24382F;
+  --em400:#2FE6A6; --em500:#1B8F68; --em600:#0F5A42;
+  --am400:#F5B85A; --red400:#F26B6B; --blue400:#5AA9F5;
+  --txt:#EAF3EF; --dim:#8FA79C; --dim2:#5C7268;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:Inter,sans-serif;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em}
+button,input,select,textarea{font-family:inherit;font-size:inherit}
+.mono{font-family:'Space Grotesk',monospace}
+.hide{display:none !important}
+
+.screen{display:none}
+.screen.on{display:block}
+/* Layar yang isinya dipusatkan. min-height, bukan height, supaya kalau
+   isinya lebih tinggi dari layar HP halaman tetap bisa digulir. */
+.screen.pusat.on{display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding:26px}
+.mobile{max-width:480px;margin:0 auto;min-height:100vh;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+
+.glass{background:rgba(20,33,29,.72);border:1px solid rgba(47,230,166,.09);border-radius:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px}
+
+.btn{border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:transform .1s,background .15s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:active:not(:disabled){transform:translateY(3px);box-shadow:none !important}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-p{background:var(--em400);color:#0B1210;box-shadow:0 4px 0 0 var(--em600);padding:14px 20px}
+.btn-s{background:var(--panel);color:var(--txt);border:1px solid var(--line);box-shadow:0 4px 0 0 #1C2B25;padding:14px 20px}
+.btn-d{background:transparent;color:var(--red400);border:1px solid rgba(242,107,107,.3);padding:9px 14px;border-radius:10px;font-weight:500}
+.btn-sm{padding:9px 14px;border-radius:10px;font-weight:500;font-size:13px;box-shadow:none}
+
+.inp{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--txt);outline:none;transition:border-color .15s}
+.inp:focus{border-color:var(--em500)}
+.inp::placeholder{color:#4A5C54}
+.lbl{display:block;font-size:11px;color:var(--dim);font-family:'Space Grotesk',monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
+
+.pill{font-size:10px;font-family:'Space Grotesk',monospace;padding:5px 10px;border-radius:8px;border:1px solid;white-space:nowrap}
+.p-ok{color:var(--em400);background:rgba(47,230,166,.1);border-color:rgba(47,230,166,.22)}
+.p-warn{color:var(--am400);background:rgba(245,184,90,.1);border-color:rgba(245,184,90,.22)}
+.p-info{color:var(--blue400);background:rgba(90,169,245,.1);border-color:rgba(90,169,245,.22)}
+.p-off{color:var(--dim);background:var(--panel2);border-color:var(--line)}
+.p-bad{color:var(--red400);background:rgba(242,107,107,.1);border-color:rgba(242,107,107,.22)}
+
+.spin{width:20px;height:20px;border:2px solid var(--line);border-top-color:var(--em400);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.dot{flex:1;height:4px;border-radius:4px;background:var(--line)}
+.dot.on{background:var(--em400)}
+
+#toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:8px;width:100%;max-width:400px;padding:0 16px;pointer-events:none}
+.tst{padding:13px 16px;border-radius:12px;border:1px solid;font-size:14px;font-weight:500;display:flex;gap:10px;align-items:flex-start;animation:in .25s}
+@keyframes in{from{opacity:0;transform:translateY(-12px)}}
+.t-ok{background:#12352A;border-color:var(--em500);color:#BFF3E0}
+.t-err{background:#3A1A1A;border-color:#7A2323;color:#F7C9C9}
+.t-inf{background:var(--panel2);border-color:var(--line);color:var(--txt)}
+
+#modal{position:fixed;inset:0;z-index:150;background:rgba(5,9,8,.8);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto}
+.mbox{background:var(--panel);border:1px solid var(--line);border-radius:20px;width:100%;max-width:460px;padding:26px;max-height:92vh;overflow-y:auto}
+
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:11px;font-family:'Space Grotesk',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);padding:14px 12px;background:var(--panel);border-bottom:1px solid var(--line)}
+td{padding:13px 12px;border-bottom:1px solid var(--line);font-size:14px}
+tbody tr:hover{background:var(--bg)}
+
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+
+.face{position:absolute;inset:0;border:2px dashed rgba(47,230,166,.45);border-radius:50%;margin:22px;pointer-events:none}
+
+/* Lambang Seven Fold Ruteng. Cakram logo berwarna hitam, jadi diberi
+   cincin tipis agar tepinya tetap terbaca di atas latar gelap. */
+.logo{background-image:var(--logo);background-size:cover;background-position:center;border-radius:50%;flex-shrink:0;
+      box-shadow:0 0 0 1px rgba(47,230,166,.28), 0 0 22px rgba(47,230,166,.14)}
+.atab{width:100%;display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:12px;font-size:14px;font-weight:500;background:transparent;border:1px solid transparent;color:var(--dim);cursor:pointer;text-align:left}
+.atab.on{background:rgba(47,230,166,.1);color:var(--em400);border-color:rgba(47,230,166,.2)}
+@media(max-width:860px){.adminwrap{flex-direction:column !important;height:auto !important}.sidebar{width:100% !important;height:auto !important}.sidebar-menu{flex-direction:row !important;overflow-x:auto}.atab{white-space:nowrap;width:auto !important}}
+</style>
+</head>
+<body>
+<div id="toast"></div>
+<div id="modal" class="hide"></div>
+
+<!-- ============ SAMBUNGAN ============ -->
+<div id="s-setup" class="screen pusat mobile">
+  <div class="glass" style="padding:28px;width:100%">
+    <h2 style="font-size:20px;margin-bottom:10px">Sambungkan ke server</h2>
+    <p style="font-size:13px;color:var(--dim);line-height:1.65;margin-bottom:22px">
+      Tempel URL Web App dari Google Apps Script. Alamat ini disimpan di perangkat ini saja
+      dan hanya perlu dimasukkan sekali.</p>
+    <label class="lbl">URL Web App</label>
+    <input id="in-url" class="inp mono" style="font-size:12px" placeholder="https://script.google.com/macros/s/.../exec">
+    <button onclick="sambung()" class="btn btn-p" style="width:100%;margin-top:20px">Sambungkan</button>
+  </div>
+</div>
+
+<!-- ============ MASUK ============ -->
+<div id="s-login" class="screen pusat mobile">
+  <div class="glass" style="padding:28px;width:100%">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px">
+      <div class="logo" style="width:54px;height:54px"></div>
+      <div>
+        <h1 style="font-size:23px">HadirDex</h1>
+        <p class="mono" style="font-size:10px;color:var(--em400);text-transform:uppercase;letter-spacing:.16em">Seven Fold Ruteng</p>
+      </div>
+    </div>
+    <h2 style="font-size:21px;margin-bottom:8px">Masuk</h2>
+    <p style="font-size:13px;color:var(--dim);margin-bottom:24px;line-height:1.6">Gunakan email dan kata sandi yang diberikan admin.</p>
+    <label class="lbl">Email</label>
+    <input id="in-email" class="inp" type="email" placeholder="nama@kantor.com" autocomplete="username">
+    <label class="lbl" style="margin-top:16px">Kata sandi</label>
+    <input id="in-sandi" class="inp" type="password" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')masuk()">
+    <button id="btn-masuk" onclick="masuk()" class="btn btn-p" style="width:100%;margin-top:22px">Masuk</button>
+    <button id="btn-ganti-url" onclick="gantiUrl()" class="hide" style="width:100%;margin-top:14px;background:none;border:none;color:var(--dim2);font-size:12px;cursor:pointer;text-decoration:underline">Alamat server bermasalah? Ubah di sini</button>
+  </div>
+</div>
+
+<!-- ============ BERANDA PEGAWAI ============ -->
+<div id="s-home" class="screen mobile" style="padding-bottom:78px">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,18,16,.94);backdrop-filter:blur(10px);z-index:10">
+    <span class="mono" style="font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.14em;display:flex;align-items:center;gap:7px">
+      <span id="titik-hidup" style="width:7px;height:7px;border-radius:50%;background:var(--em400)"></span>Terhubung</span>
+    <span class="mono" id="jam-bar" style="font-size:11px;color:var(--dim)">--:--</span>
+  </div>
+  <div style="padding:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px">
+      <div>
+        <h2 id="nama-peg" style="font-size:22px">—</h2>
+        <p id="tgl-peg" class="mono" style="font-size:11px;color:var(--dim);margin-top:5px"></p>
+      </div>
+      <div id="ava-peg" style="width:46px;height:46px;border-radius:50%;background:var(--panel2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--em400);font-weight:700;font-size:14px"></div>
+    </div>
+
+    <div class="glass" style="padding:24px;text-align:center;margin-bottom:22px">
+      <h1 id="jam-besar" class="mono" style="font-size:38px;letter-spacing:-.04em;margin-bottom:6px">00:00:00</h1>
+      <p id="kantor-nama" style="font-size:12px;color:var(--dim);margin-bottom:18px"></p>
+      <div id="badge-hari" class="mono" style="display:inline-block;font-size:11px;padding:9px 16px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--dim)">Memuat…</div>
+    </div>
+
+    <button id="btn-absen" onclick="mulaiAbsen()" class="btn btn-p" style="width:100%;padding:19px;margin-bottom:12px;font-size:15px">
+      <i class="ph-bold ph-camera" style="font-size:22px"></i><span id="lbl-absen">Absen datang</span></button>
+
+    <div style="display:flex;gap:10px;margin-bottom:26px">
+      <div class="card" style="flex:1;padding:14px;text-align:center">
+        <div id="stat-in" class="mono" style="font-size:17px;font-weight:700">--:--</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:5px;text-transform:uppercase;letter-spacing:.06em">Datang</div></div>
+      <div class="card" style="flex:1;padding:14px;text-align:center">
+        <div id="stat-out" class="mono" style="font-size:17px;font-weight:700">--:--</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:5px;text-transform:uppercase;letter-spacing:.06em">Pulang</div></div>
+    </div>
+
+    <h3 class="mono" style="font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px">Riwayat</h3>
+    <div id="riwayat" style="display:flex;flex-direction:column;gap:10px"></div>
+  </div>
+
+  <div style="position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;background:rgba(11,18,16,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);display:flex;justify-content:space-around;z-index:20">
+    <button onclick="layar('s-home')" style="flex:1;padding:12px;background:none;border:none;color:var(--em400);display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer">
+      <i class="ph-fill ph-house" style="font-size:22px"></i><span class="mono" style="font-size:10px">Beranda</span></button>
+    <button onclick="layar('s-izin')" style="flex:1;padding:12px;background:none;border:none;color:var(--dim2);display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer">
+      <i class="ph ph-envelope-open" style="font-size:22px"></i><span class="mono" style="font-size:10px">Izin</span></button>
+    <button onclick="dialogSandi()" style="flex:1;padding:12px;background:none;border:none;color:var(--dim2);display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer">
+      <i class="ph ph-lock" style="font-size:22px"></i><span class="mono" style="font-size:10px">Sandi</span></button>
+    <button onclick="keluar()" style="flex:1;padding:12px;background:none;border:none;color:var(--dim2);display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer">
+      <i class="ph ph-sign-out" style="font-size:22px"></i><span class="mono" style="font-size:10px">Keluar</span></button>
+  </div>
+</div>
+
+<!-- ============ IZIN ============ -->
+<div id="s-izin" class="screen mobile" style="padding-bottom:78px">
+  <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)">
+    <button onclick="layar('s-home')" class="card" style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--txt);cursor:pointer"><i class="ph-bold ph-arrow-left"></i></button>
+    <h2 style="font-size:16px">Ajukan cuti atau izin</h2>
+  </div>
+  <div style="padding:20px">
+    <div class="glass" style="padding:24px;margin-bottom:20px">
+      <label class="lbl">Jenis</label>
+      <select id="iz-tipe" class="inp"><option>Sakit</option><option>Cuti</option><option>Izin</option></select>
+      <div style="display:flex;gap:10px;margin-top:16px">
+        <div style="flex:1"><label class="lbl">Mulai</label><input id="iz-mulai" type="date" class="inp" style="color-scheme:dark"></div>
+        <div style="flex:1"><label class="lbl">Selesai</label><input id="iz-selesai" type="date" class="inp" style="color-scheme:dark"></div>
+      </div>
+      <label class="lbl" style="margin-top:16px">Keterangan</label>
+      <textarea id="iz-ket" rows="3" class="inp" placeholder="Tulis alasannya"></textarea>
+      <label class="lbl" style="margin-top:16px">Bukti (opsional)</label>
+      <input id="iz-file" type="file" accept="image/*" class="inp" style="padding:11px">
+      <button id="btn-izin" onclick="kirimIzin()" class="btn btn-p" style="width:100%;margin-top:22px">Kirim pengajuan</button>
+    </div>
+    <h3 class="mono" style="font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Pengajuan saya</h3>
+    <div id="daftar-izin" style="display:flex;flex-direction:column;gap:10px"></div>
+  </div>
+</div>
+
+<!-- ============ ALUR ABSEN ============ -->
+<div id="s-flow" class="screen mobile">
+  <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)">
+    <button onclick="batalAbsen()" class="card" style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--txt);cursor:pointer"><i class="ph-bold ph-x"></i></button>
+    <h2 style="font-size:16px">Absen</h2>
+  </div>
+  <div id="flow" style="padding:22px"></div>
+</div>
+
+<!-- ============ ADMIN ============ -->
+<div id="s-admin" class="screen">
+  <div class="adminwrap" style="display:flex;height:100vh;overflow:hidden">
+    <div class="sidebar" style="width:260px;background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;flex-shrink:0">
+      <div style="padding:22px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)">
+        <div class="logo" style="width:40px;height:40px"></div>
+        <div><h2 style="font-size:16px">HadirDex</h2>
+          <span class="mono" style="font-size:10px;color:var(--em400);text-transform:uppercase;letter-spacing:.1em">Admin</span></div>
+      </div>
+      <div class="sidebar-menu" style="flex:1;padding:16px;display:flex;flex-direction:column;gap:6px;overflow-y:auto">
+        <button onclick="tabAdmin('ringkasan',this)" class="atab on"><i class="ph ph-squares-four" style="font-size:19px"></i>Ringkasan</button>
+        <button onclick="tabAdmin('pegawai',this)" class="atab"><i class="ph ph-users" style="font-size:19px"></i>Kelola pegawai</button>
+        <button onclick="tabAdmin('cuti',this)" class="atab"><i class="ph ph-envelope-open" style="font-size:19px"></i>Cuti &amp; izin</button>
+        <button onclick="tabAdmin('jadwal',this)" class="atab"><i class="ph ph-clock" style="font-size:19px"></i>Jam kerja</button>
+        <button onclick="tabAdmin('arsip',this)" class="atab"><i class="ph ph-archive" style="font-size:19px"></i>Arsip bulanan</button>
+        <button onclick="tabAdmin('sistem',this)" class="atab"><i class="ph ph-gear" style="font-size:19px"></i>Lokasi &amp; sistem</button>
+      </div>
+      <div style="padding:16px;border-top:1px solid var(--line)">
+        <div id="admin-email" style="font-size:12px;color:var(--dim);margin-bottom:12px;word-break:break-all"></div>
+        <button onclick="dialogSandi()" class="btn btn-sm" style="width:100%;background:var(--panel2);color:var(--txt);border:1px solid var(--line);margin-bottom:8px">Ganti kata sandi</button>
+        <button onclick="keluar()" class="btn btn-sm btn-d" style="width:100%">Keluar</button>
+      </div>
+    </div>
+
+    <div style="flex:1;overflow-y:auto">
+      <div style="padding:18px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,18,16,.94);backdrop-filter:blur(10px);z-index:10">
+        <h1 id="judul-admin" style="font-size:18px">Ringkasan</h1>
+        <div style="display:flex;gap:10px;align-items:center">
+          <span id="rt-admin" class="mono" style="font-size:11px;color:var(--em400)">Menyambung…</span>
+          <button onclick="muatAdmin()" class="btn btn-sm" style="background:var(--panel2);color:var(--dim);border:1px solid var(--line)"><i class="ph ph-arrows-clockwise"></i> Muat ulang</button>
+          <span id="jam-admin" class="mono" style="font-size:11px;color:var(--em400);background:rgba(47,230,166,.1);padding:7px 12px;border-radius:9px;border:1px solid rgba(47,230,166,.2)">--:--</span>
+        </div>
+      </div>
+      <div style="padding:26px;max-width:1180px">
+        <div id="v-ringkasan"></div>
+        <div id="v-pegawai" class="hide"></div>
+        <div id="v-cuti" class="hide"></div>
+        <div id="v-jadwal" class="hide"></div>
+        <div id="v-arsip" class="hide"></div>
+        <div id="v-sistem" class="hide"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// ALAMAT SERVER
+// ------------------------------------------------------------
+// ISI BARIS DI BAWAH INI dengan URL Web App dari Apps Script,
+// lalu unggah ulang berkas ini ke GitHub. Setelah terisi, pegawai
+// tidak akan pernah melihat kolom alamat server — mereka langsung
+// masuk ke layar login. Hanya yang memegang repositori GitHub
+// yang bisa mengubahnya.
+//
+// Contoh:
+// var URL_SERVER = 'https://script.google.com/macros/s/AKfycb.../exec';
+// ============================================================
+var URL_SERVER = 'https://script.google.com/macros/s/AKfycbwOGIPjMF7vnNTPe50BIELrwd6_l53HI1lXS_kQCV6ibNUpL6ukiE30vsHezjbfpu_w/exec';
+
+// ============================================================
+// STATUS APLIKASI
+// ============================================================
+var app = {
+  url: URL_SERVER || localStorage.getItem('hadirdex_url') || '',
+  token: sessionStorage.getItem('hadirdex_token') || '',
+  saya: null, admin: null, alur: {}, chart: null, tabAktif: 'ringkasan'
+};
+
+// ============================================================
+// KOMUNIKASI SERVER
+// ------------------------------------------------------------
+// Content-Type text/plain membuat ini "simple request" sehingga
+// browser tidak mengirim preflight OPTIONS, yang tidak didukung
+// Apps Script. Dengan begitu respons server tetap bisa dibaca.
+// ============================================================
+function panggil(aksi, data) {
+  var muatan = data || {};
+  muatan.aksi = aksi;
+  muatan.token = app.token;
+  var ringan = (aksi === 'cekPerubahan');
+  if (!ringan) rt.antre++;              // tandai ada permintaan pengguna berjalan
+  var kontrol = ('AbortController' in window) ? new AbortController() : null;
+  var jamMati = kontrol ? setTimeout(function () { kontrol.abort(); }, 25000) : null;
+  var sudahBeres = false;
+  function bereskan() {
+    if (sudahBeres) return;             // jalur galat bisa lewat sini dua kali
+    sudahBeres = true;
+    if (jamMati) clearTimeout(jamMati);
+    if (!ringan) rt.antre = Math.max(0, rt.antre - 1);
+  }
+  return fetch(app.url, {
+    signal: kontrol ? kontrol.signal : undefined,
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(muatan)
+  }).then(function (r) {
+    if (!r.ok) { bereskan(); throw new Error('Server menolak (HTTP ' + r.status + ')'); }
+    return r.json();
+  }).then(function (h) {
+    bereskan();
+    if (h.keluar) { paksaKeluar(); throw new Error(h.pesan); }
+    return h;
+  }).catch(function (e) {
+    bereskan();
+    if (e && e.name === 'AbortError') throw new Error('Server tidak menjawab dalam 25 detik. Coba lagi.');
+    throw e;
+  });
+}
+
+// ============================================================
+// TAMPILAN DASAR
+// ============================================================
+function layar(id) {
+  document.querySelectorAll('.screen').forEach(function (e) { e.classList.remove('on'); });
+  document.getElementById(id).classList.add('on');
+  window.scrollTo(0, 0);
+}
+
+function pesan(teks, jenis) {
+  var w = document.getElementById('toast');
+  var d = document.createElement('div');
+  d.className = 'tst ' + (jenis === 'err' ? 't-err' : jenis === 'ok' ? 't-ok' : 't-inf');
+  var i = document.createElement('i');
+  i.className = 'ph-fill ' + (jenis === 'err' ? 'ph-warning-circle' : jenis === 'ok' ? 'ph-check-circle' : 'ph-info');
+  i.style.fontSize = '18px'; i.style.flexShrink = '0';
+  var s = document.createElement('span');
+  s.textContent = teks;                       // textContent, bukan innerHTML
+  d.appendChild(i); d.appendChild(s);
+  w.appendChild(d);
+  setTimeout(function () { d.remove(); }, jenis === 'err' ? 6000 : 3800);
+}
+
+function sibuk(id, aktif, teksAsli) {
+  var b = document.getElementById(id);
+  if (!b) return;
+  b.disabled = aktif;
+  if (aktif) { b.dataset.asli = b.innerHTML; b.innerHTML = '<div class="spin"></div>'; }
+  else b.innerHTML = teksAsli || b.dataset.asli || '';
+}
+
+function esc(t) { var d = document.createElement('div'); d.textContent = t === null || t === undefined ? '' : t; return d.innerHTML; }
+
+function tutupModal() { document.getElementById('modal').classList.add('hide'); }
+function bukaModal(html) {
+  var m = document.getElementById('modal');
+  m.innerHTML = '<div class="mbox">' + html + '</div>';
+  m.classList.remove('hide');
+  m.onclick = function (e) { if (e.target === m) tutupModal(); };
+}
+
+function kelasStatus(s) {
+  if (s === 'Terlambat' || s === 'ditolak') return 'p-warn';
+  if (s === 'Tepat Waktu' || s === 'disetujui' || s === 'aktif') return 'p-ok';
+  if (s === 'menunggu') return 'p-info';
+  return 'p-off';
+}
+
+// ============================================================
+// SAMBUNGAN & MASUK
+// ============================================================
+function sambung() {
+  var u = document.getElementById('in-url').value.trim();
+  if (!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(u)) {
+    return pesan('URL harus diawali https://script.google.com/macros/s/ dan diakhiri /exec', 'err');
+  }
+  app.url = u;
+  panggil('cekKoneksi', {}).then(function (h) {
+    if (!h.ok) throw new Error(h.pesan);
+    localStorage.setItem('hadirdex_url', u);
+    pesan('Server terhubung', 'ok');
+    layar('s-login');
+  }).catch(function (e) {
+    pesan('Gagal terhubung. Pastikan deployment disetel "Anyone". ' + e.message, 'err');
+  });
+}
+
+function gantiUrl() {
+  document.getElementById('in-url').value = app.url;
+  layar('s-setup');
+}
+
+function masuk() {
+  var email = document.getElementById('in-email').value.trim();
+  var sandi = document.getElementById('in-sandi').value;
+  if (!email || !sandi) return pesan('Email dan kata sandi wajib diisi', 'err');
+
+  sibuk('btn-masuk', true);
+  panggil('login', { email: email, sandi: sandi }).then(function (h) {
+    sibuk('btn-masuk', false, 'Masuk');
+    if (!h.ok) return pesan(h.pesan, 'err');
+    app.token = h.token; app.saya = h.pengguna;
+    sessionStorage.setItem('hadirdex_token', h.token);
+    document.getElementById('in-sandi').value = '';
+    mulaiSesi();
+  }).catch(function (e) {
+    sibuk('btn-masuk', false, 'Masuk');
+    pesan(e.message, 'err');
+    // Baru tawarkan ganti alamat kalau servernya memang tidak terjangkau
+    if (!URL_SERVER) document.getElementById('btn-ganti-url').classList.remove('hide');
+  });
+}
+
+function mulaiSesi() {
+  if (app.saya.peran === 'admin') {
+    document.getElementById('admin-email').textContent = app.saya.email;
+    layar('s-admin'); muatAdmin();
+  } else {
+    layar('s-home'); muatBeranda();
+  }
+  mulaiRealtime();
+}
+
+function keluar() {
+  panggil('keluar', {}).catch(function () {});
+  paksaKeluar();
+}
+
+function paksaKeluar() {
+  hentikanRealtime();
+  rt.versi = 0; rt.gagal = 0; rt.jeda = 30000; rt.sibuk = false; rt.antre = 0;
+  app.token = ''; app.saya = null; app.admin = null;
+  sessionStorage.removeItem('hadirdex_token');
+  layar('s-login');
+}
+
+function dialogSandi() {
+  bukaModal(
+    '<h2 style="font-size:19px;margin-bottom:18px">Ganti kata sandi</h2>' +
+    '<label class="lbl">Kata sandi lama</label><input id="ps-lama" type="password" class="inp">' +
+    '<label class="lbl" style="margin-top:14px">Kata sandi baru</label><input id="ps-baru" type="password" class="inp" placeholder="Minimal 8 karakter">' +
+    '<label class="lbl" style="margin-top:14px">Ulangi kata sandi baru</label><input id="ps-ulang" type="password" class="inp">' +
+    '<div style="display:flex;gap:10px;margin-top:22px">' +
+    '<button onclick="tutupModal()" class="btn btn-s" style="flex:1">Batal</button>' +
+    '<button id="ps-btn" onclick="simpanSandi()" class="btn btn-p" style="flex:1">Simpan</button></div>');
+}
+
+function simpanSandi() {
+  var baru = document.getElementById('ps-baru').value;
+  if (baru !== document.getElementById('ps-ulang').value) return pesan('Kata sandi baru tidak sama', 'err');
+  if (baru.length < 8) return pesan('Minimal 8 karakter', 'err');
+  sibuk('ps-btn', true);
+  panggil('gantiSandi', { sandiLama: document.getElementById('ps-lama').value, sandiBaru: baru })
+    .then(function (h) {
+      sibuk('ps-btn', false, 'Simpan');
+      pesan(h.pesan, h.ok ? 'ok' : 'err');
+      if (h.ok) tutupModal();
+    }).catch(function (e) { sibuk('ps-btn', false, 'Simpan'); pesan(e.message, 'err'); });
+}
+
+// ============================================================
+// BERANDA PEGAWAI
+// ============================================================
+function muatBeranda() {
+  panggil('muatBeranda', {}).then(function (h) {
+    if (!h.ok) return pesan(h.pesan, 'err');
+    app.beranda = h;
+    document.getElementById('nama-peg').textContent = h.pengguna.nama;
+    document.getElementById('ava-peg').textContent = h.pengguna.nama.substring(0, 2).toUpperCase();
+    document.getElementById('tgl-peg').textContent = h.tanggalServer.toUpperCase();
+    document.getElementById('kantor-nama').textContent = h.namaKantor;
+
+    var badge = document.getElementById('badge-hari');
+    var btn = document.getElementById('btn-absen');
+    var lbl = document.getElementById('lbl-absen');
+
+    document.getElementById('stat-in').textContent = h.hariIni.datang ? h.hariIni.datang.waktu : '--:--';
+    document.getElementById('stat-out').textContent = h.hariIni.pulang ? h.hariIni.pulang.waktu : '--:--';
+
+    if (h.jadwalHariIni.libur) {
+      badge.textContent = 'Hari ini libur';
+      btn.disabled = true; lbl.textContent = 'Libur';
+    } else if (h.hariIni.datang && h.hariIni.pulang) {
+      badge.textContent = 'Absen hari ini selesai';
+      btn.disabled = true; lbl.textContent = 'Selesai';
+    } else if (h.hariIni.datang) {
+      badge.textContent = 'Sedang bekerja · masuk ' + h.hariIni.datang.waktu;
+      btn.disabled = false; lbl.textContent = 'Absen pulang';
+    } else {
+      badge.textContent = 'Jam masuk ' + h.jadwalHariIni.masuk + ' · toleransi ' + h.jadwalHariIni.toleransi + ' menit';
+      btn.disabled = false; lbl.textContent = 'Absen datang';
+    }
+
+    var r = document.getElementById('riwayat');
+    r.innerHTML = h.riwayat.length ? h.riwayat.map(function (x) {
+      return '<div class="card" style="padding:13px;display:flex;justify-content:space-between;align-items:center">' +
+        '<div style="display:flex;gap:13px;align-items:center">' +
+        '<div style="width:36px;height:36px;border-radius:10px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center">' +
+        '<i class="ph-bold ' + (x.tipe === 'Datang' ? 'ph-arrow-down-left' : 'ph-arrow-up-right') + '" style="color:var(--dim)"></i></div>' +
+        '<div><div style="font-weight:600;font-size:14px">' + esc(x.tipe) + '</div>' +
+        '<div class="mono" style="font-size:11px;color:var(--dim);margin-top:2px">' + esc(x.tanggal) + ' · ' + esc(x.waktu) + '</div></div></div>' +
+        '<span class="pill ' + kelasStatus(x.status) + '">' + esc(x.status) + '</span></div>';
+    }).join('') : '<p style="font-size:13px;color:var(--dim2);text-align:center;padding:26px">Belum ada riwayat bulan ini.</p>';
+
+    var di = document.getElementById('daftar-izin');
+    di.innerHTML = h.cuti.length ? h.cuti.map(function (c) {
+      return '<div class="card" style="padding:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">' +
+        '<div style="min-width:0"><div style="font-weight:600;font-size:14px">' + esc(c.tipe) + '</div>' +
+        '<div class="mono" style="font-size:11px;color:var(--dim);margin-top:2px">' + esc(c.tanggalMulai) + '</div></div>' +
+        '<span class="pill ' + kelasStatus(c.status) + '">' + esc(c.status) + '</span></div>';
+    }).join('') : '<p style="font-size:13px;color:var(--dim2);text-align:center;padding:20px">Belum ada pengajuan.</p>';
+  }).catch(function (e) { pesan(e.message, 'err'); });
+}
+
+// ============================================================
+// ALUR ABSEN
+// ============================================================
+function mulaiAbsen() {
+  app.alur = {};
+  // Jenis absen ditentukan server dari data yang sudah ada hari ini.
+  // Yang ditampilkan di sini hanya perkiraan agar pegawai tahu apa
+  // yang akan tercatat; keputusan akhir tetap di server.
+  var b = app.beranda;
+  app.alur.perkiraanTipe = (b && b.hariIni && b.hariIni.datang) ? 'Pulang' : 'Datang';
+  layar('s-flow');
+  langkahLokasi();
+}
+
+function spandukTipe() {
+  var t = app.alur.perkiraanTipe || 'Datang';
+  var pulang = t === 'Pulang';
+  var w = pulang ? 'var(--blue400)' : 'var(--em400)';
+  var jam = '';
+  if (pulang && app.beranda && app.beranda.hariIni.datang) {
+    jam = 'Anda masuk pukul ' + app.beranda.hariIni.datang.waktu;
+  } else if (app.beranda && app.beranda.jadwalHariIni) {
+    jam = 'Jam masuk ' + app.beranda.jadwalHariIni.masuk +
+          ' · toleransi ' + app.beranda.jadwalHariIni.toleransi + ' menit';
+  }
+  return '<div class="card" style="padding:14px;margin-bottom:18px;display:flex;gap:13px;align-items:center;border-left:3px solid ' + w + '">' +
+    '<i class="ph-bold ' + (pulang ? 'ph-arrow-up-right' : 'ph-arrow-down-left') +
+    '" style="font-size:22px;color:' + w + '"></i>' +
+    '<div><div style="font-weight:700;font-size:14px;color:' + w + '">Absen ' + t + '</div>' +
+    '<div class="mono" style="font-size:11px;color:var(--dim);margin-top:2px">' + esc(jam) + '</div></div></div>';
+}
+
+function jejak(n) {
+  return '<div style="display:flex;gap:7px;max-width:190px;margin:0 auto 26px">' +
+    [1, 2, 3].map(function (i) { return '<div class="dot' + (n >= i ? ' on' : '') + '"></div>'; }).join('') + '</div>';
+}
+
+function batalAbsen() {
+  if (app.alur.stream) app.alur.stream.getTracks().forEach(function (t) { t.stop(); });
+  app.alur = {};
+  layar('s-home'); muatBeranda();
+}
+
+function langkahLokasi() {
+  document.getElementById('flow').innerHTML = jejak(1) + spandukTipe() +
+    '<h2 style="font-size:19px;margin-bottom:8px">Mengambil lokasi</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.65;margin-bottom:24px">Koordinat dikirim ke server dan diperiksa di sana. Aplikasi ini tidak bisa meloloskan lokasi yang di luar radius.</p>' +
+    '<div class="card" id="kotak-gps" style="padding:20px;display:flex;gap:14px;align-items:center">' +
+    '<div class="spin"></div><div><div style="font-weight:600;font-size:14px">Menunggu sinyal GPS</div>' +
+    '<div id="gps-info" class="mono" style="font-size:11px;color:var(--dim);margin-top:3px">Pastikan izin lokasi diberikan</div></div></div>' +
+    '<button id="btn-lanjut" class="btn btn-p" style="width:100%;margin-top:24px" disabled>Lanjut ke kamera</button>';
+
+  if (!navigator.geolocation) return gagalLokasi('Perangkat ini tidak mendukung GPS.');
+
+  navigator.geolocation.getCurrentPosition(function (pos) {
+    app.alur.lat = pos.coords.latitude;
+    app.alur.lng = pos.coords.longitude;
+    app.alur.akurasi = pos.coords.accuracy;
+    var kabur = pos.coords.accuracy > 100;
+    document.getElementById('kotak-gps').innerHTML =
+      '<i class="ph-bold ph-check-circle" style="font-size:26px;color:' + (kabur ? 'var(--am400)' : 'var(--em400)') + '"></i>' +
+      '<div><div style="font-weight:600;font-size:14px">Lokasi didapat</div>' +
+      '<div class="mono" style="font-size:11px;color:' + (kabur ? 'var(--am400)' : 'var(--em400)') + ';margin-top:3px">Meleset sekitar ' +
+      Math.round(pos.coords.accuracy) + ' m' + (kabur ? ' · agak kabur' : '') + '</div></div>';
+    var b = document.getElementById('btn-lanjut');
+    b.disabled = false;
+    b.onclick = langkahKamera;
+  }, function (err) {
+    gagalLokasi(err.code === 1
+      ? 'Izin lokasi ditolak. Absen tidak bisa dilanjutkan tanpa lokasi.'
+      : 'Sinyal GPS tidak terbaca. Coba pindah ke dekat jendela atau ruang terbuka.');
+  }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 0 });
+}
+
+function gagalLokasi(teks) {
+  document.getElementById('kotak-gps').innerHTML =
+    '<i class="ph-bold ph-x-circle" style="font-size:26px;color:var(--red400)"></i>' +
+    '<div><div style="font-weight:600;font-size:14px">Lokasi gagal dibaca</div>' +
+    '<div style="font-size:12px;color:var(--red400);margin-top:3px;line-height:1.5">' + esc(teks) + '</div></div>';
+  var b = document.getElementById('btn-lanjut');
+  b.textContent = 'Coba lagi';
+  b.disabled = false;
+  b.onclick = langkahLokasi;
+}
+
+function langkahKamera() {
+  document.getElementById('flow').innerHTML = jejak(2) + spandukTipe() +
+    '<p class="mono" style="font-size:11px;color:var(--dim);text-align:center;text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px">Ambil foto wajah</p>' +
+    '<div style="position:relative;width:100%;max-width:270px;aspect-ratio:3/4;margin:0 auto;background:#000;border-radius:22px;overflow:hidden;border:1px solid var(--line)">' +
+    '<div id="cam-pesan" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--dim);text-align:center;padding:20px">' +
+    '<i class="ph ph-camera" style="font-size:34px;margin-bottom:10px"></i><p style="font-size:12px">Meminta izin kamera…</p></div>' +
+    '<video id="vid" autoplay playsinline muted style="width:100%;height:100%;object-fit:cover;transform:scaleX(-1);display:none"></video>' +
+    '<div id="guide" class="face" style="display:none"></div></div>' +
+    '<p style="font-size:12px;color:var(--dim);text-align:center;margin-top:16px;line-height:1.6">Foto disimpan sebagai bukti kehadiran dan bisa dilihat admin.</p>' +
+    '<button id="btn-jepret" class="btn btn-p" style="width:100%;margin-top:22px" disabled>Ambil foto</button>';
+
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user', width: { ideal: 1280 } }, audio: false })
+    .then(function (stream) {
+      app.alur.stream = stream;
+      var v = document.getElementById('vid');
+      v.srcObject = stream;
+      v.style.display = 'block';
+      document.getElementById('cam-pesan').style.display = 'none';
+      document.getElementById('guide').style.display = 'block';
+      var b = document.getElementById('btn-jepret');
+      b.disabled = false;
+      b.onclick = jepretDanKirim;
+    }).catch(function () {
+      document.getElementById('cam-pesan').innerHTML =
+        '<i class="ph ph-camera-slash" style="font-size:34px;margin-bottom:10px;color:var(--red400)"></i>' +
+        '<p style="font-size:12px;color:var(--red400);line-height:1.6">Kamera tidak bisa diakses.<br>Periksa izin kamera di pengaturan browser.</p>';
+    });
+}
+
+/** Kompres ke lebar maksimal 480px agar hemat kuota Drive. */
+function jepretDanKirim() {
+  var v = document.getElementById('vid');
+  if (!v || !v.videoWidth) return pesan('Kamera belum siap', 'err');
+
+  var lebar = (app.beranda && app.beranda.lebarFoto) || 480;
+  var tinggi = Math.round(v.videoHeight * (lebar / v.videoWidth));
+  var c = document.createElement('canvas');
+  c.width = lebar; c.height = tinggi;
+  var ctx = c.getContext('2d');
+  ctx.translate(lebar, 0); ctx.scale(-1, 1);
+  ctx.drawImage(v, 0, 0, lebar, tinggi);
+  app.alur.foto = c.toDataURL('image/jpeg', 0.62);
+
+  if (app.alur.stream) app.alur.stream.getTracks().forEach(function (t) { t.stop(); });
+  kirimAbsen();
+}
+
+function kirimAbsen() {
+  document.getElementById('flow').innerHTML = jejak(3) +
+    '<div style="display:flex;flex-direction:column;align-items:center;padding:56px 0">' +
+    '<div class="spin" style="width:44px;height:44px;border-width:3px;margin-bottom:22px"></div>' +
+    '<p style="font-size:14px;color:var(--dim)">Mengirim dan memeriksa di server…</p></div>';
+
+  panggil('absen', { lat: app.alur.lat, lng: app.alur.lng, akurasi: app.alur.akurasi,
+                     foto: app.alur.foto, metode: 'Selfie' })
+    .then(function (h) { h.ok ? hasilBerhasil(h) : hasilGagal(h.pesan, h.rincian); })
+    .catch(function (e) { hasilGagal(e.message); });
+}
+
+function hasilBerhasil(h) {
+  var warna = h.status === 'Terlambat' ? 'var(--am400)' : 'var(--em400)';
+  document.getElementById('flow').innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;padding-top:26px">' +
+    '<div style="width:82px;height:82px;border-radius:50%;border:3px solid ' + warna + ';display:flex;align-items:center;justify-content:center;color:' + warna + ';margin-bottom:22px">' +
+    '<i class="ph-bold ph-check" style="font-size:40px"></i></div>' +
+    '<h2 style="font-size:21px;margin-bottom:8px">Absen ' + esc(h.tipe.toLowerCase()) + ' tercatat</h2>' +
+    '<p style="font-size:12px;color:var(--dim);text-align:center;margin-bottom:26px;line-height:1.6">Dicatat dengan jam server, bukan jam perangkat.</p>' +
+    '<div class="glass" style="width:100%;padding:20px">' +
+    barisNilai('Jenis', 'Absen ' + h.tipe) +
+    (h.tipe === 'Pulang' && app.beranda && app.beranda.hariIni.datang
+      ? barisNilai('Masuk tadi', app.beranda.hariIni.datang.waktu) : '') +
+    barisNilai('Waktu', h.waktu) + barisNilai('Status', h.status) +
+    (h.jarak !== null ? barisNilai('Jarak dari kantor', h.jarak + ' m') : '') +
+    (h.status === 'Terlambat' ? barisNilai('Terlambat', h.menitSelisih + ' menit') : '') +
+    barisNilai('Bukti', 'Foto tersimpan', true) + '</div></div>' +
+    '<button onclick="batalAbsen()" class="btn btn-s" style="width:100%;margin-top:26px">Kembali ke beranda</button>';
+}
+
+function barisNilai(k, v, akhir) {
+  return '<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0' +
+    (akhir ? '' : ';border-bottom:1px solid rgba(255,255,255,.05)') + '">' +
+    '<span class="mono" style="font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em">' + esc(k) + '</span>' +
+    '<span style="font-size:13px;font-weight:600">' + esc(v) + '</span></div>';
+}
+
+function hasilGagal(teks, rincian) {
+  var kotakRincian = '';
+  if (rincian) {
+    kotakRincian =
+      '<div class="card" style="width:100%;padding:14px;margin-top:22px">' +
+      '<div class="mono" style="font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:9px">Rincian teknis</div>' +
+      '<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0">' +
+      '<span style="font-size:12px;color:var(--dim)">Posisi Anda</span>' +
+      '<span class="mono" style="font-size:11px">' + esc(rincian.posisiAnda) + '</span></div>' +
+      '<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0">' +
+      '<span style="font-size:12px;color:var(--dim)">Titik kantor</span>' +
+      '<span class="mono" style="font-size:11px">' + esc(rincian.titikKantor) + '</span></div>' +
+      '<p style="font-size:11px;color:var(--dim2);line-height:1.6;margin-top:10px">' +
+      'Kalau kedua angka ini jauh berbeda padahal Anda di kantor, titik kantornya yang salah. ' +
+      'Tunjukkan layar ini ke admin.</p></div>';
+  }
+  document.getElementById('flow').innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;padding-top:36px">' +
+    '<div style="width:82px;height:82px;border-radius:50%;border:3px solid var(--red400);display:flex;align-items:center;justify-content:center;color:var(--red400);margin-bottom:22px">' +
+    '<i class="ph-bold ph-x" style="font-size:40px"></i></div>' +
+    '<h2 style="font-size:21px;margin-bottom:12px">Absen ditolak</h2>' +
+    '<p style="font-size:14px;color:var(--dim);text-align:center;line-height:1.7;max-width:300px">' + esc(teks) + '</p>' +
+    kotakRincian + '</div>' +
+    '<div style="display:flex;gap:10px;margin-top:26px">' +
+    '<button onclick="batalAbsen()" class="btn btn-s" style="flex:1">Kembali</button>' +
+    '<button onclick="mulaiAbsen()" class="btn btn-p" style="flex:1">Coba lagi</button></div>';
+}
+
+// ============================================================
+// IZIN
+// ============================================================
+function kirimIzin() {
+  var mulai = document.getElementById('iz-mulai').value;
+  var ket = document.getElementById('iz-ket').value.trim();
+  if (!mulai || !ket) return pesan('Tanggal mulai dan keterangan wajib diisi', 'err');
+
+  var berkas = document.getElementById('iz-file').files[0];
+  sibuk('btn-izin', true);
+
+  bacaGambar(berkas).then(function (bukti) {
+    return panggil('ajukanCuti', {
+      tipe: document.getElementById('iz-tipe').value,
+      tanggalMulai: mulai,
+      tanggalSelesai: document.getElementById('iz-selesai').value || mulai,
+      keterangan: ket, bukti: bukti
+    });
+  }).then(function (h) {
+    sibuk('btn-izin', false, 'Kirim pengajuan');
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+    if (h.ok) {
+      document.getElementById('iz-ket').value = '';
+      document.getElementById('iz-file').value = '';
+      muatBeranda();
+    }
+  }).catch(function (e) { sibuk('btn-izin', false, 'Kirim pengajuan'); pesan(e.message, 'err'); });
+}
+
+/** Kompres bukti ke lebar maksimal 900px sebelum diunggah. */
+function bacaGambar(berkas) {
+  return new Promise(function (selesai) {
+    if (!berkas) return selesai('');
+    var fr = new FileReader();
+    fr.onload = function () {
+      var img = new Image();
+      img.onload = function () {
+        var lebar = Math.min(900, img.width);
+        var c = document.createElement('canvas');
+        c.width = lebar; c.height = Math.round(img.height * (lebar / img.width));
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        selesai(c.toDataURL('image/jpeg', 0.7));
+      };
+      img.onerror = function () { selesai(''); };
+      img.src = fr.result;
+    };
+    fr.onerror = function () { selesai(''); };
+    fr.readAsDataURL(berkas);
+  });
+}
+
+// ============================================================
+// ADMIN
+// ============================================================
+function tabAdmin(tab, tombol) {
+  app.tabAktif = tab;
+  document.querySelectorAll('.atab').forEach(function (e) { e.classList.remove('on'); });
+  if (tombol) tombol.classList.add('on');
+  ['ringkasan', 'pegawai', 'cuti', 'jadwal', 'arsip', 'sistem'].forEach(function (t) {
+    document.getElementById('v-' + t).classList.toggle('hide', t !== tab);
+  });
+  var judul = { ringkasan: 'Ringkasan', pegawai: 'Kelola pegawai', cuti: 'Cuti & izin',
+                jadwal: 'Jam kerja', arsip: 'Arsip bulanan', sistem: 'Lokasi & sistem' };
+  document.getElementById('judul-admin').textContent = judul[tab];
+  if (tab === 'pegawai') muatPegawai();
+  if (tab === 'arsip') muatArsip();
+  if (tab === 'sistem') {
+    if (app.admin && app.admin.kuota) {
+      gambarSistem(app.admin.pengaturan, app.admin.kuota, app.admin.penyimpanan);
+    } else {
+      document.getElementById('v-sistem').innerHTML =
+        '<div style="display:flex;justify-content:center;padding:44px"><div class="spin"></div></div>';
+      muatAdmin(false, true);
+    }
+  }
+}
+
+// ---------- Arsip bulanan ----------
+function muatArsip() {
+  document.getElementById('v-arsip').innerHTML =
+    '<div style="display:flex;justify-content:center;padding:44px"><div class="spin"></div></div>';
+  panggil('daftarBulan', {}).then(function (h) {
+    if (!h.ok) return pesan(h.pesan, 'err');
+    gambarArsip(h.bulan);
+  }).catch(function (e) { pesan(e.message, 'err'); });
+}
+
+function gambarArsip(bulan) {
+  document.getElementById('v-arsip').innerHTML =
+    '<div class="glass" style="padding:24px;max-width:760px">' +
+    '<h2 style="font-size:18px;margin-bottom:8px">Arsip bulanan</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:8px">' +
+    'Data absensi otomatis terpisah per bulan, jadi setiap bulan baru sudah mulai dari nol tanpa perlu direset. ' +
+    'Bulan lama tetap tersimpan agar bisa dicetak ulang kapan saja.</p>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:22px">' +
+    'Tombol Arsipkan hanya dipakai kalau Anda ingin benar-benar mengosongkan sheet bulan lama. ' +
+    'Salinannya dibuat lebih dulu sebagai berkas terpisah di Drive.</p>' +
+
+    '<div class="card" style="overflow:hidden"><div style="overflow-x:auto"><table style="min-width:560px">' +
+    '<thead><tr><th>Bulan</th><th>Jumlah baris</th><th>Keterangan</th><th style="text-align:right">Tindakan</th></tr></thead><tbody>' +
+    bulan.map(function (b) {
+      return '<tr><td style="font-weight:600">' + esc(b.label) + '</td>' +
+        '<td class="mono">' + b.jumlah + '</td>' +
+        '<td>' + (b.bulanBerjalan ? '<span class="pill p-ok">Bulan berjalan</span>'
+                                  : b.jumlah ? '<span class="pill p-off">Selesai</span>'
+                                             : '<span class="pill p-off">Kosong</span>') + '</td>' +
+        '<td style="text-align:right;white-space:nowrap">' +
+        '<button onclick="ekspor(\'absensi\',\'' + esc(b.kunci) + '\')" class="btn btn-sm" ' +
+        'style="background:var(--panel2);color:var(--em400);border:1px solid var(--line);margin-right:6px">Cetak CSV</button>' +
+        (b.jumlah ? '<button onclick="dialogArsip(\'' + esc(b.kunci) + '\',\'' + esc(b.label) + '\',' +
+                    b.jumlah + ',' + b.bulanBerjalan + ')" class="btn btn-sm btn-d">Arsipkan</button>' : '') +
+        '</td></tr>';
+    }).join('') + '</tbody></table></div></div></div>';
+}
+
+function dialogArsip(kunci, label, jumlah, berjalan) {
+  bukaModal('<h2 style="font-size:19px;margin-bottom:8px">Arsipkan ' + esc(label) + '?</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:16px">' +
+    jumlah + ' baris akan disalin ke berkas baru di folder Drive "HadirDex - Arsip Bulanan", ' +
+    'lalu sheet aslinya dikosongkan. Salinan dibuat lebih dulu — kalau penyalinan gagal, ' +
+    'tidak ada yang dihapus.</p>' +
+    '<div class="card" style="padding:13px;margin-bottom:16px">' +
+    '<p style="font-size:12px;color:var(--am400);line-height:1.6">' +
+    '<i class="ph-fill ph-warning-circle"></i> Pastikan Anda sudah menekan Cetak CSV dan menyimpan berkasnya.</p></div>' +
+    (berjalan ? '<label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;cursor:pointer;margin-bottom:18px;line-height:1.5">' +
+      '<input type="checkbox" id="ar-paksa" style="width:17px;height:17px;accent-color:#1B8F68;margin-top:2px">' +
+      '<span style="color:var(--am400)">Ini bulan yang sedang berjalan. Saya mengerti absensi yang sudah tercatat bulan ini akan hilang dari dasbor.</span></label>' : '') +
+    '<div style="display:flex;gap:10px">' +
+    '<button onclick="tutupModal()" class="btn btn-s" style="flex:1">Batal</button>' +
+    '<button id="ar-btn" onclick="lakukanArsip(\'' + esc(kunci) + '\',' + berjalan + ')" class="btn btn-p" ' +
+    'style="flex:1;background:var(--red400);box-shadow:0 4px 0 0 #7A2323">Arsipkan</button></div>');
+}
+
+function lakukanArsip(kunci, berjalan) {
+  var paksa = false;
+  if (berjalan) {
+    var c = document.getElementById('ar-paksa');
+    if (!c || !c.checked) return pesan('Centang persetujuan dulu', 'err');
+    paksa = true;
+  }
+  sibuk('ar-btn', true);
+  panggil('arsipkanBulan', { kunci: kunci, paksa: paksa }).then(function (h) {
+    sibuk('ar-btn', false, 'Arsipkan');
+    if (!h.ok) return pesan(h.pesan, 'err');
+    pesan(h.pesan, 'ok');
+    tutupModal();
+    muatArsip();
+    muatAdmin();
+    if (h.url) window.open(h.url, '_blank');
+  }).catch(function (e) { sibuk('ar-btn', false, 'Arsipkan'); pesan(e.message, 'err'); });
+}
+
+/** diam = pembaruan otomatis dari polling. Pemindaian Drive dilewati
+    karena berat, dan tab yang sedang diisi admin tidak digambar ulang. */
+/**
+ * diam = pembaruan otomatis dari polling.
+ * sistem = ikut ambil kuota email dan pemakaian Drive. Keduanya
+ * memanggil layanan Google di luar Spreadsheet sehingga lambat, jadi
+ * hanya diambil saat tab "Lokasi & sistem" dibuka.
+ */
+function muatAdmin(diam, sistem) {
+  panggil('muatAdmin', { sertakanSistem: !!sistem }).then(function (h) {
+    if (!h.ok) return pesan(h.pesan, 'err');
+    var sebelum = app.admin;
+    app.admin = h;
+    if (h.versi) rt.versi = h.versi;
+    // Pertahankan data sistem yang sudah pernah diambil
+    if (!h.kuota && sebelum) { h.kuota = sebelum.kuota; h.penyimpanan = sebelum.penyimpanan; }
+
+    gambarRingkasan(h);
+    gambarCuti(h.cuti);
+
+    // Jangan timpa form yang mungkin sedang diisi
+    if (!diam || app.tabAktif !== 'jadwal') gambarJadwal(h.pengaturan.jadwal);
+    if (!diam && app.tabAktif === 'sistem' && h.kuota) {
+      gambarSistem(h.pengaturan, h.kuota, h.penyimpanan);
+    }
+    if (app.tabAktif === 'pegawai' && !diam) muatPegawai();
+  }).catch(function (e) { if (!diam) pesan(e.message, 'err'); });
+}
+
+function kartu(judul, nilai, warna) {
+  return '<div class="glass" style="padding:18px;border-top:2px solid ' + warna + '">' +
+    '<div class="mono" style="font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:9px">' + judul + '</div>' +
+    '<div class="mono" style="font-size:32px;font-weight:700">' + nilai + '</div></div>';
+}
+
+function gambarRingkasan(h) {
+  var r = h.ringkasan;
+  document.getElementById('v-ringkasan').innerHTML =
+    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:14px;margin-bottom:24px">' +
+    kartu('Tepat waktu', r.tepat, 'var(--em400)') +
+    kartu('Terlambat', r.telat, 'var(--am400)') +
+    kartu('Izin disetujui', r.izin, 'var(--blue400)') +
+    kartu('Belum absen', r.belum, 'var(--line)') + '</div>' +
+
+    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">' +
+    '<div class="glass" style="padding:22px">' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">' +
+    '<h3 style="font-size:14px">Kehadiran 7 hari terakhir</h3>' +
+    '<button onclick="ekspor(\'absensi\')" class="btn btn-sm" style="background:rgba(47,230,166,.1);color:var(--em400);border:1px solid rgba(47,230,166,.2)">' +
+    '<i class="ph-bold ph-download-simple"></i> Ekspor CSV</button></div>' +
+    '<div style="height:250px"><canvas id="grafik"></canvas></div></div>' +
+
+    '<div class="glass" style="padding:22px">' +
+    '<h3 style="font-size:14px;margin-bottom:18px">Aktivitas hari ini</h3>' +
+    '<div style="display:flex;flex-direction:column;gap:9px;max-height:250px;overflow-y:auto">' +
+    (h.terkini.length ? h.terkini.map(function (t) {
+      return '<div class="card" style="padding:12px;display:flex;align-items:center;gap:12px">' +
+        '<div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">' + esc(t.nama) + '</div>' +
+        '<div class="mono" style="font-size:11px;color:var(--dim);margin-top:2px">' + esc(t.tipe) + ' · ' + esc(t.waktu) +
+        (t.jarak !== '' ? ' · ' + esc(t.jarak) + ' m' : '') + '</div></div>' +
+        (t.urlFoto ? '<a href="' + esc(t.urlFoto) + '" target="_blank" rel="noopener" title="Lihat foto" style="color:var(--dim);font-size:17px"><i class="ph ph-image"></i></a>' : '') +
+        '<button onclick="dialogKoreksi(\'' + esc(t.id) + '\',\'' + esc(t.tanggal) + '\',\'' + esc(t.waktu) + '\',\'' + esc(t.status) + '\')" title="Koreksi" style="background:none;border:none;color:var(--dim);cursor:pointer;font-size:17px"><i class="ph ph-pencil-simple"></i></button>' +
+        '<span class="pill ' + kelasStatus(t.status) + '">' + esc(t.status) + '</span></div>';
+    }).join('') : '<p style="font-size:13px;color:var(--dim2);padding:26px;text-align:center">Belum ada absensi hari ini.</p>') +
+    '</div></div></div>';
+
+  var ctx = document.getElementById('grafik');
+  if (app.chart) app.chart.destroy();
+  Chart.defaults.color = '#5C7268';
+  Chart.defaults.font.family = "'Space Grotesk',monospace";
+  app.chart = new Chart(ctx, {
+    type: 'bar',
+    data: { labels: h.grafik.label, datasets: [
+      { label: 'Tepat waktu', data: h.grafik.hadir, backgroundColor: '#2FE6A6', borderRadius: 5 },
+      { label: 'Terlambat', data: h.grafik.telat, backgroundColor: '#F5B85A', borderRadius: 5 }] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, padding: 16 } } },
+      scales: { y: { stacked: true, beginAtZero: true, ticks: { precision: 0 }, grid: { color: '#1C2B25' } },
+                x: { stacked: true, grid: { display: false } } } }
+  });
+}
+
+// ---------- Kelola pegawai ----------
+function muatPegawai() {
+  document.getElementById('v-pegawai').innerHTML =
+    '<div style="display:flex;justify-content:center;padding:44px"><div class="spin"></div></div>';
+  panggil('daftarPegawai', {}).then(function (h) {
+    if (!h.ok) return pesan(h.pesan, 'err');
+    app.pegawai = h.pegawai;
+    gambarPegawai(h.pegawai);
+  }).catch(function (e) { pesan(e.message, 'err'); });
+}
+
+function gambarPegawai(daftar) {
+  var aktif = daftar.filter(function (p) { return p.status === 'aktif'; }).length;
+  document.getElementById('v-pegawai').innerHTML =
+    '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center">' +
+    '<button onclick="dialogPegawai()" class="btn btn-p btn-sm"><i class="ph-bold ph-plus"></i> Tambah pegawai</button>' +
+    '<button onclick="dialogImpor()" class="btn btn-sm" style="background:var(--panel2);color:var(--txt);border:1px solid var(--line)"><i class="ph ph-upload-simple"></i> Impor CSV</button>' +
+    '<button onclick="ekspor(\'pegawai\')" class="btn btn-sm" style="background:var(--panel2);color:var(--txt);border:1px solid var(--line)"><i class="ph ph-download-simple"></i> Ekspor CSV</button>' +
+    '<span style="font-size:12px;color:var(--dim);margin-left:auto">' + aktif + ' aktif dari ' + daftar.length + ' akun</span></div>' +
+
+    '<div class="card" style="overflow:hidden"><div style="overflow-x:auto"><table style="min-width:680px">' +
+    '<thead><tr><th>Nama</th><th>Email</th><th>Jabatan</th><th>Peran</th><th>Status</th><th style="text-align:right">Tindakan</th></tr></thead><tbody>' +
+    daftar.map(function (p) {
+      return '<tr><td style="font-weight:600">' + esc(p.nama) + '</td>' +
+        '<td style="color:var(--dim);font-size:13px">' + esc(p.email) + '</td>' +
+        '<td style="color:var(--dim);font-size:13px">' + esc(p.jabatan || '—') + '</td>' +
+        '<td><span class="pill ' + (p.peran === 'admin' ? 'p-info' : 'p-off') + '">' + esc(p.peran) + '</span></td>' +
+        '<td><span class="pill ' + kelasStatus(p.status) + '">' + esc(p.status) + '</span></td>' +
+        '<td style="text-align:right;white-space:nowrap">' +
+        '<button onclick="dialogPegawai(\'' + esc(p.id) + '\')" title="Ubah" style="background:none;border:none;color:var(--em400);cursor:pointer;font-size:17px;padding:5px"><i class="ph ph-pencil-simple"></i></button>' +
+        (p.status === 'aktif'
+          ? '<button onclick="nonaktifkan(\'' + esc(p.id) + '\',\'' + esc(p.nama) + '\')" title="Nonaktifkan" style="background:none;border:none;color:var(--red400);cursor:pointer;font-size:17px;padding:5px"><i class="ph ph-user-minus"></i></button>'
+          : '') + '</td></tr>';
+    }).join('') + '</tbody></table></div></div>';
+}
+
+function dialogPegawai(id) {
+  var p = id ? app.pegawai.filter(function (x) { return x.id === id; })[0] : null;
+  bukaModal(
+    '<h2 style="font-size:19px;margin-bottom:6px">' + (p ? 'Ubah pegawai' : 'Tambah pegawai') + '</h2>' +
+    '<p style="font-size:12px;color:var(--dim);margin-bottom:20px">' +
+    (p ? 'Kosongkan kata sandi jika tidak ingin menggantinya.' : 'Kata sandi awal diberikan ke pegawai untuk masuk pertama kali.') + '</p>' +
+    '<label class="lbl">Nama lengkap</label><input id="pg-nama" class="inp" value="' + esc(p ? p.nama : '') + '">' +
+    '<label class="lbl" style="margin-top:14px">Email</label><input id="pg-email" type="email" class="inp" value="' + esc(p ? p.email : '') + '">' +
+    '<label class="lbl" style="margin-top:14px">Jabatan</label><input id="pg-jabatan" class="inp" value="' + esc(p ? p.jabatan : '') + '">' +
+    '<div style="display:flex;gap:10px;margin-top:14px">' +
+    '<div style="flex:1"><label class="lbl">Peran</label><select id="pg-peran" class="inp">' +
+    '<option value="pegawai"' + (p && p.peran === 'pegawai' ? ' selected' : '') + '>Pegawai</option>' +
+    '<option value="admin"' + (p && p.peran === 'admin' ? ' selected' : '') + '>Admin</option></select></div>' +
+    '<div style="flex:1"><label class="lbl">Status</label><select id="pg-status" class="inp">' +
+    '<option value="aktif"' + (!p || p.status === 'aktif' ? ' selected' : '') + '>Aktif</option>' +
+    '<option value="nonaktif"' + (p && p.status === 'nonaktif' ? ' selected' : '') + '>Nonaktif</option></select></div></div>' +
+    '<label class="lbl" style="margin-top:14px">' + (p ? 'Kata sandi baru' : 'Kata sandi awal') + '</label>' +
+    '<input id="pg-sandi" type="text" class="inp" placeholder="Minimal 8 karakter">' +
+    '<div style="display:flex;gap:10px;margin-top:22px">' +
+    '<button onclick="tutupModal()" class="btn btn-s" style="flex:1">Batal</button>' +
+    '<button id="pg-btn" onclick="simpanPegawai(' + (p ? "'" + esc(p.id) + "'" : 'null') + ')" class="btn btn-p" style="flex:1">Simpan</button></div>');
+}
+
+function simpanPegawai(id) {
+  sibuk('pg-btn', true);
+  panggil('simpanPegawai', {
+    id: id, nama: document.getElementById('pg-nama').value,
+    email: document.getElementById('pg-email').value,
+    jabatan: document.getElementById('pg-jabatan').value,
+    peran: document.getElementById('pg-peran').value,
+    status: document.getElementById('pg-status').value,
+    sandiBaru: document.getElementById('pg-sandi').value
+  }).then(function (h) {
+    sibuk('pg-btn', false, 'Simpan');
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+    if (h.ok) { tutupModal(); muatPegawai(); }
+  }).catch(function (e) { sibuk('pg-btn', false, 'Simpan'); pesan(e.message, 'err'); });
+}
+
+function nonaktifkan(id, nama) {
+  bukaModal('<h2 style="font-size:19px;margin-bottom:12px">Nonaktifkan ' + esc(nama) + '?</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:22px">Akun tidak bisa dipakai masuk lagi, tetapi seluruh riwayat absensinya tetap tersimpan. Status bisa dikembalikan kapan saja lewat tombol ubah.</p>' +
+    '<div style="display:flex;gap:10px">' +
+    '<button onclick="tutupModal()" class="btn btn-s" style="flex:1">Batal</button>' +
+    '<button id="na-btn" onclick="lakukanNonaktif(\'' + esc(id) + '\')" class="btn btn-p" style="flex:1;background:var(--red400);box-shadow:0 4px 0 0 #7A2323">Nonaktifkan</button></div>');
+}
+
+function lakukanNonaktif(id) {
+  sibuk('na-btn', true);
+  panggil('hapusPegawai', { id: id }).then(function (h) {
+    sibuk('na-btn', false, 'Nonaktifkan');
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+    if (h.ok) { tutupModal(); muatPegawai(); }
+  }).catch(function (e) { sibuk('na-btn', false, 'Nonaktifkan'); pesan(e.message, 'err'); });
+}
+
+function dialogImpor() {
+  bukaModal('<h2 style="font-size:19px;margin-bottom:6px">Impor pegawai dari CSV</h2>' +
+    '<p style="font-size:12px;color:var(--dim);line-height:1.7;margin-bottom:16px">Baris pertama adalah judul kolom dan akan dilewati. Email yang sudah terdaftar otomatis dilewati.</p>' +
+    '<div class="card" style="padding:13px;margin-bottom:16px"><code class="mono" style="font-size:11px;color:var(--em400);line-height:1.8;display:block">' +
+    'nama,email,jabatan,peran,sandi<br>Budi Santoso,budi@kantor.com,Operasional,pegawai,rahasia123<br>Ayu Kusuma,ayu@kantor.com,HRD,admin,rahasia456</code></div>' +
+    '<input id="im-file" type="file" accept=".csv,text/csv" class="inp" style="padding:11px">' +
+    '<div style="display:flex;gap:10px;margin-top:22px">' +
+    '<button onclick="tutupModal()" class="btn btn-s" style="flex:1">Batal</button>' +
+    '<button id="im-btn" onclick="prosesImpor()" class="btn btn-p" style="flex:1">Impor</button></div>');
+}
+
+function prosesImpor() {
+  var f = document.getElementById('im-file').files[0];
+  if (!f) return pesan('Pilih berkas CSV dulu', 'err');
+  sibuk('im-btn', true);
+  var fr = new FileReader();
+  fr.onload = function () {
+    panggil('imporPegawai', { csv: fr.result }).then(function (h) {
+      sibuk('im-btn', false, 'Impor');
+      if (!h.ok) return pesan(h.pesan, 'err');
+      pesan(h.pesan, 'ok');
+      if (h.dilewati && h.dilewati.length) pesan(h.dilewati.length + ' email sudah terdaftar, dilewati', 'inf');
+      if (h.galat && h.galat.length) pesan(h.galat.length + ' baris bermasalah: ' + h.galat[0], 'err');
+      tutupModal(); muatPegawai();
+    }).catch(function (e) { sibuk('im-btn', false, 'Impor'); pesan(e.message, 'err'); });
+  };
+  fr.readAsText(f);
+}
+
+// ---------- Koreksi absensi ----------
+function dialogKoreksi(id, tanggal, waktu, status) {
+  bukaModal('<h2 style="font-size:19px;margin-bottom:6px">Koreksi absensi</h2>' +
+    '<p style="font-size:12px;color:var(--dim);line-height:1.7;margin-bottom:20px">Setiap koreksi dicatat di sheet Audit lengkap dengan nama admin dan nilai sebelumnya.</p>' +
+    '<label class="lbl">Waktu</label><input id="ko-waktu" type="time" class="inp" value="' + esc(waktu) + '" style="color-scheme:dark">' +
+    '<label class="lbl" style="margin-top:14px">Status</label><select id="ko-status" class="inp">' +
+    ['Tepat Waktu', 'Terlambat', 'Selesai', 'Pulang Awal'].map(function (s) {
+      return '<option' + (s === status ? ' selected' : '') + '>' + s + '</option>';
+    }).join('') + '</select>' +
+    '<div style="display:flex;gap:10px;margin-top:22px">' +
+    '<button onclick="tutupModal()" class="btn btn-s" style="flex:1">Batal</button>' +
+    '<button id="ko-btn" onclick="simpanKoreksi(\'' + esc(id) + '\',\'' + esc(tanggal) + '\')" class="btn btn-p" style="flex:1">Simpan</button></div>' +
+    '<button onclick="hapusAbsen(\'' + esc(id) + '\',\'' + esc(tanggal) + '\')" class="btn btn-d" style="width:100%;margin-top:12px">Hapus baris ini</button>');
+}
+
+function simpanKoreksi(id, tanggal) {
+  sibuk('ko-btn', true);
+  panggil('koreksiAbsen', { id: id, tanggal: tanggal,
+    waktu: document.getElementById('ko-waktu').value,
+    status: document.getElementById('ko-status').value
+  }).then(function (h) {
+    sibuk('ko-btn', false, 'Simpan');
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+    if (h.ok) { tutupModal(); muatAdmin(); }
+  }).catch(function (e) { sibuk('ko-btn', false, 'Simpan'); pesan(e.message, 'err'); });
+}
+
+function hapusAbsen(id, tanggal) {
+  panggil('hapusAbsen', { id: id, tanggal: tanggal }).then(function (h) {
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+    if (h.ok) { tutupModal(); muatAdmin(); }
+  }).catch(function (e) { pesan(e.message, 'err'); });
+}
+
+// ---------- Cuti ----------
+function gambarCuti(daftar) {
+  var menunggu = daftar.filter(function (c) { return c.status === 'menunggu'; });
+  document.getElementById('v-cuti').innerHTML =
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px">' +
+    '<p style="font-size:13px;color:var(--dim)">' + menunggu.length + ' pengajuan menunggu ditinjau</p>' +
+    '<button onclick="ekspor(\'cuti\')" class="btn btn-sm" style="background:var(--panel2);color:var(--txt);border:1px solid var(--line)"><i class="ph ph-download-simple"></i> Ekspor CSV</button></div>' +
+    (daftar.length ? daftar.map(function (c) {
+      return '<div class="glass" style="padding:18px;margin-bottom:12px">' +
+        '<div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">' +
+        '<div style="flex:1;min-width:210px">' +
+        '<div style="display:flex;gap:10px;align-items:center;margin-bottom:7px">' +
+        '<span style="font-weight:600">' + esc(c.nama) + '</span>' +
+        '<span class="pill ' + kelasStatus(c.status) + '">' + esc(c.status) + '</span></div>' +
+        '<div class="mono" style="font-size:11px;color:var(--dim);margin-bottom:9px">' + esc(c.tipe) + ' · ' +
+        esc(c.tanggalMulai) + (c.tanggalSelesai !== c.tanggalMulai ? ' s/d ' + esc(c.tanggalSelesai) : '') + '</div>' +
+        '<p style="font-size:13px;color:var(--txt);line-height:1.6">' + esc(c.keterangan) + '</p>' +
+        (c.urlBukti ? '<a href="' + esc(c.urlBukti) + '" target="_blank" rel="noopener" style="font-size:12px;color:var(--em400);display:inline-block;margin-top:9px"><i class="ph ph-paperclip"></i> Lihat bukti</a>' : '') +
+        '</div>' +
+        (c.status === 'menunggu'
+          ? '<div style="display:flex;gap:8px;align-items:flex-start">' +
+            '<button onclick="tinjau(\'' + esc(c.id) + '\',true)" class="btn btn-sm" style="background:rgba(47,230,166,.12);color:var(--em400);border:1px solid rgba(47,230,166,.25)">Setujui</button>' +
+            '<button onclick="tinjau(\'' + esc(c.id) + '\',false)" class="btn btn-sm btn-d">Tolak</button></div>'
+          : '') + '</div></div>';
+    }).join('') : '<p style="font-size:13px;color:var(--dim2);text-align:center;padding:44px">Belum ada pengajuan cuti atau izin.</p>');
+}
+
+function tinjau(id, setujui) {
+  panggil('tinjauCuti', { id: id, setujui: setujui }).then(function (h) {
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+    if (h.ok) muatAdmin();
+  }).catch(function (e) { pesan(e.message, 'err'); });
+}
+
+// ---------- Jadwal ----------
+function gambarJadwal(jadwal) {
+  document.getElementById('v-jadwal').innerHTML =
+    '<div class="glass" style="padding:24px;max-width:840px">' +
+    '<h2 style="font-size:18px;margin-bottom:8px">Jam kerja</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:22px">Aturan ini disimpan di server dan langsung berlaku untuk semua pegawai. Server memakai jam ini untuk menentukan terlambat, bukan jam di perangkat pegawai.</p>' +
+    '<div class="card" style="overflow:hidden"><div style="overflow-x:auto"><table style="min-width:600px">' +
+    '<thead><tr><th>Hari</th><th style="text-align:center">Libur</th><th>Masuk</th><th>Toleransi</th><th>Pulang</th></tr></thead><tbody>' +
+    jadwal.map(function (h, i) {
+      return '<tr><td style="font-weight:600;color:var(--em400)">' + esc(h.hari) + '</td>' +
+        '<td style="text-align:center"><input type="checkbox" id="jd-libur-' + i + '"' + (h.libur ? ' checked' : '') +
+        ' onchange="aturBaris(' + i + ')" style="width:17px;height:17px;accent-color:#1B8F68;cursor:pointer"></td>' +
+        '<td><input type="time" id="jd-masuk-' + i + '" value="' + esc(h.masuk) + '"' + (h.libur ? ' disabled' : '') + ' class="inp" style="padding:8px 10px;width:118px;color-scheme:dark"></td>' +
+        '<td><input type="number" id="jd-tol-' + i + '" value="' + esc(h.toleransi) + '" min="0" max="180"' + (h.libur ? ' disabled' : '') + ' class="inp" style="padding:8px 10px;width:78px;text-align:center"> <span style="font-size:11px;color:var(--dim2)">menit</span></td>' +
+        '<td><input type="time" id="jd-pulang-' + i + '" value="' + esc(h.pulang) + '"' + (h.libur ? ' disabled' : '') + ' class="inp" style="padding:8px 10px;width:118px;color-scheme:dark"></td></tr>';
+    }).join('') + '</tbody></table></div></div>' +
+    '<button id="jd-btn" onclick="simpanJadwal()" class="btn btn-p" style="margin-top:22px">Simpan jam kerja</button></div>';
+}
+
+/** Hanya menonaktifkan input, tidak menggambar ulang tabel,
+    sehingga perubahan yang belum disimpan tidak hilang. */
+function aturBaris(i) {
+  var libur = document.getElementById('jd-libur-' + i).checked;
+  ['masuk', 'tol', 'pulang'].forEach(function (k) {
+    document.getElementById('jd-' + k + '-' + i).disabled = libur;
+  });
+}
+
+function simpanJadwal() {
+  var hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+  var jadwal = hari.map(function (nama, i) {
+    return { hari: nama,
+      libur: document.getElementById('jd-libur-' + i).checked,
+      masuk: document.getElementById('jd-masuk-' + i).value || '08:00',
+      toleransi: parseInt(document.getElementById('jd-tol-' + i).value, 10) || 0,
+      pulang: document.getElementById('jd-pulang-' + i).value || '17:00' };
+  });
+  sibuk('jd-btn', true);
+  panggil('simpanPengaturan', { pengaturan: { jadwal: jadwal } }).then(function (h) {
+    sibuk('jd-btn', false, 'Simpan jam kerja');
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+  }).catch(function (e) { sibuk('jd-btn', false, 'Simpan jam kerja'); pesan(e.message, 'err'); });
+}
+
+// ---------- Lokasi & sistem ----------
+function gb(byte) {
+  if (!byte) return '0 B';
+  var u = ['B', 'KB', 'MB', 'GB', 'TB'], i = 0, n = Number(byte);
+  while (n >= 1024 && i < u.length - 1) { n /= 1024; i++; }
+  return (n < 10 && i > 1 ? n.toFixed(2) : Math.round(n)) + ' ' + u[i];
+}
+
+function panelPenyimpanan(pn) {
+  if (!pn || !pn.batas) {
+    return '<div class="glass" style="padding:24px;max-width:640px;margin-bottom:18px">' +
+      '<h2 style="font-size:18px;margin-bottom:8px">Penyimpanan</h2>' +
+      '<p style="font-size:13px;color:var(--dim)">Menunggu data. Tekan Muat ulang di kanan atas.</p></div>';
+  }
+  var sisa = pn.batas - pn.terpakai;
+  var warna = pn.persen > 90 ? 'var(--red400)' : pn.persen > 70 ? 'var(--am400)' : 'var(--em400)';
+  // Perkiraan sisa umur berdasar rata-rata ukuran foto yang benar-benar tersimpan
+  var perFoto = pn.rataFoto || 46000;
+  var sisaFoto = Math.floor(sisa / perFoto);
+  var aktif = app.admin && app.admin.ringkasan ? Math.max(1, app.admin.ringkasan.totalAktif) : 1;
+  var sisaHari = Math.floor(sisaFoto / (aktif * 2));
+
+  return '<div class="glass" style="padding:24px;max-width:640px;margin-bottom:18px">' +
+    '<h2 style="font-size:18px;margin-bottom:8px">Penyimpanan Google Drive</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:20px">' +
+    'Angka ini dibaca langsung dari akun Google Anda. Begitu paket Google One dinaikkan, ' +
+    'batas di bawah ikut naik sendiri tanpa perlu mengubah apa pun.</p>' +
+
+    '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px">' +
+    '<span class="mono" style="font-size:19px;font-weight:700">' + gb(pn.terpakai) + '</span>' +
+    '<span style="font-size:13px;color:var(--dim)">dari ' + gb(pn.batas) + ' terpakai</span></div>' +
+    '<div style="height:9px;background:var(--bg);border-radius:99px;overflow:hidden;border:1px solid var(--line)">' +
+    '<div style="height:100%;width:' + Math.min(100, pn.persen) + '%;background:' + warna + ';border-radius:99px"></div></div>' +
+    '<p style="font-size:12px;color:var(--dim2);margin-top:8px">' + pn.persen + '% terpakai · sisa ' + gb(sisa) + '</p>' +
+
+    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px">' +
+    '<div class="card" style="padding:14px"><div class="mono" style="font-size:19px;font-weight:700">' + pn.jumlahFoto + '</div>' +
+    '<div style="font-size:11px;color:var(--dim);margin-top:4px">Foto absensi tersimpan</div></div>' +
+    '<div class="card" style="padding:14px"><div class="mono" style="font-size:19px;font-weight:700">' + gb(pn.rataFoto) + '</div>' +
+    '<div style="font-size:11px;color:var(--dim);margin-top:4px">Rata-rata per foto</div></div>' +
+    '<div class="card" style="padding:14px"><div class="mono" style="font-size:19px;font-weight:700">' +
+    (sisaHari > 3650 ? '10+ thn' : sisaHari > 400 ? Math.round(sisaHari / 365) + ' thn' : sisaHari + ' hari') + '</div>' +
+    '<div style="font-size:11px;color:var(--dim);margin-top:4px">Perkiraan sisa umur</div></div></div>' +
+
+    '<p style="font-size:12px;color:var(--dim2);line-height:1.7;margin-top:16px">' +
+    'Perkiraan dihitung dari ' + aktif + ' pegawai aktif × 2 absen per hari. ' +
+    'Foto lama boleh dihapus manual dari folder Drive kapan saja — baris absensinya tetap utuh, ' +
+    'hanya tautan fotonya yang mati.</p></div>';
+}
+
+function gambarSistem(s, kuota, penyimpanan) {
+  document.getElementById('v-sistem').innerHTML =
+    panelPenyimpanan(penyimpanan) +
+    '<div class="glass" style="padding:24px;max-width:640px;margin-bottom:18px">' +
+    '<h2 style="font-size:18px;margin-bottom:8px">Lokasi kantor</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:20px">Server menolak absen di luar radius ini. Koordinat bisa diambil dari Google Maps dengan klik kanan pada titik kantor.</p>' +
+    '<label class="lbl">Nama kantor</label><input id="st-nama" class="inp" value="' + esc(s.namaKantor) + '">' +
+    '<div style="display:flex;gap:10px;margin-top:14px">' +
+    '<div style="flex:1"><label class="lbl">Lintang (lat)</label><input id="st-lat" class="inp mono" style="font-size:13px" value="' + esc(s.lat) + '"></div>' +
+    '<div style="flex:1"><label class="lbl">Bujur (lng)</label><input id="st-lng" class="inp mono" style="font-size:13px" value="' + esc(s.lng) + '"></div></div>' +
+    '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">' +
+    '<button id="btn-kalibrasi" onclick="kalibrasiLokasi()" class="btn btn-sm" style="background:var(--panel2);color:var(--txt);border:1px solid var(--line)"><i class="ph ph-crosshair"></i> Ukur lokasi (8 sampel)</button>' +
+    '<a href="https://www.google.com/maps?q=' + encodeURIComponent(s.lat + ',' + s.lng) + '" target="_blank" rel="noopener" ' +
+    'class="btn btn-sm" style="background:var(--panel2);color:var(--em400);border:1px solid var(--line);text-decoration:none">' +
+    '<i class="ph ph-map-pin"></i> Periksa di peta</a></div>' +
+    '<div id="kalibrasi-hasil" class="hide" style="margin-top:12px"></div>' +
+
+    '<label class="lbl" style="margin-top:18px">Atau tempel tautan Google Maps</label>' +
+    '<div style="display:flex;gap:8px">' +
+    '<input id="st-tempel" class="inp" style="flex:1;font-size:12px" placeholder="Tempel tautan atau koordinat di sini">' +
+    '<button onclick="bacaTempelan()" class="btn btn-sm" style="background:var(--panel2);color:var(--txt);border:1px solid var(--line);white-space:nowrap">Baca</button></div>' +
+    '<p style="font-size:12px;color:var(--dim2);line-height:1.6;margin-top:8px">' +
+    'Buka Google Maps, tekan lama tepat di atap gedung kantor, salin koordinat yang muncul, lalu tempel di sini. ' +
+    'Cara ini lebih akurat daripada GPS karena Anda memilih titiknya sendiri di citra satelit.</p>' +
+    '<label class="lbl" style="margin-top:16px">Radius maksimal (meter)</label><input id="st-radius" type="number" min="10" max="5000" class="inp" value="' + esc(s.radiusMeter) + '">' +
+    '<label style="display:flex;gap:10px;align-items:center;margin-top:16px;font-size:13px;cursor:pointer">' +
+    '<input type="checkbox" id="st-wajib-radius"' + (s.wajibDalamRadius ? ' checked' : '') + ' style="width:17px;height:17px;accent-color:#1B8F68">' +
+    'Tolak absen di luar radius</label>' +
+    '<label style="display:flex;gap:10px;align-items:center;margin-top:10px;font-size:13px;cursor:pointer">' +
+    '<input type="checkbox" id="st-wajib-foto"' + (s.wajibFoto ? ' checked' : '') + ' style="width:17px;height:17px;accent-color:#1B8F68">' +
+    'Wajib foto saat absen</label>' +
+
+    '<label class="lbl" style="margin-top:18px">Batas akurasi GPS (meter)</label>' +
+    '<input id="st-akurasi" type="number" min="0" max="1000" class="inp" value="' + esc(s.akurasiMaksimal === undefined ? 100 : s.akurasiMaksimal) + '">' +
+    '<p style="font-size:12px;color:var(--dim2);line-height:1.6;margin-top:7px">' +
+    'Absen ditolak kalau perangkat melaporkan lokasi yang lebih kabur dari angka ini. ' +
+    'Isi 0 untuk mematikan. Naikkan kalau banyak pegawai ditolak padahal berada di kantor.</p>' +
+
+    '<label class="lbl" style="margin-top:18px">Lebar foto (piksel)</label>' +
+    '<select id="st-lebar" class="inp">' +
+    [[320, '320 — paling hemat, sekitar 22 KB'],
+     [480, '480 — seimbang, sekitar 45 KB'],
+     [640, '640 — lebih jelas, sekitar 80 KB'],
+     [960, '960 — paling tajam, sekitar 180 KB']].map(function (o) {
+      return '<option value="' + o[0] + '"' + (Number(s.lebarFoto || 480) === o[0] ? ' selected' : '') + '>' + o[1] + '</option>';
+    }).join('') + '</select>' +
+    '<button id="st-btn1" onclick="simpanLokasi()" class="btn btn-p" style="margin-top:22px">Simpan pengaturan</button></div>' +
+
+    '<div class="glass" style="padding:24px;max-width:640px">' +
+    '<h2 style="font-size:18px;margin-bottom:8px">Laporan ke atasan</h2>' +
+    '<p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:8px">Satu email ringkasan dikirim setiap sore pukul 18.00, berisi jumlah hadir, daftar terlambat, dan daftar yang belum absen.</p>' +
+    '<p style="font-size:12px;color:var(--dim2);line-height:1.6;margin-bottom:20px">Sisa kuota email hari ini: ' + esc(kuota.emailTersisa) + ' dari 100. Ringkasan harian memakai 1 email per hari.</p>' +
+    '<label class="lbl">Email atasan</label><input id="st-email" type="email" class="inp" value="' + esc(s.emailAtasan || '') + '" placeholder="kosongkan jika tidak dipakai">' +
+    '<button id="st-btn2" onclick="simpanEmail()" class="btn btn-p" style="margin-top:20px">Simpan email</button></div>';
+}
+
+/**
+ * Mengambil beberapa sampel GPS lalu memakai nilai tengah (median).
+ * Satu pembacaan GPS bisa meleset jauh; median dari beberapa sampel
+ * jauh lebih stabil dan tidak terganggu oleh satu bacaan yang ngawur.
+ */
+function kalibrasiLokasi() {
+  if (!navigator.geolocation) return pesan('Perangkat ini tidak mendukung GPS', 'err');
+
+  var sampel = [];
+  var target = 8;
+  var kotak = document.getElementById('kalibrasi-hasil');
+  var btn = document.getElementById('btn-kalibrasi');
+  kotak.classList.remove('hide');
+  btn.disabled = true;
+
+  function tampil(teks, warna) {
+    kotak.innerHTML = '<div class="card" style="padding:14px;border-color:' + (warna || 'var(--line)') + '">' +
+      teks + '</div>';
+  }
+
+  tampil('<div style="display:flex;gap:12px;align-items:center">' +
+         '<div class="spin"></div><div><div style="font-weight:600;font-size:13px">Mengukur…</div>' +
+         '<div class="mono" style="font-size:11px;color:var(--dim);margin-top:3px">Sampel 0 dari ' + target +
+         '</div></div></div>');
+
+  var pantau = navigator.geolocation.watchPosition(function (pos) {
+    sampel.push({ lat: pos.coords.latitude, lng: pos.coords.longitude, akr: pos.coords.accuracy });
+    tampil('<div style="display:flex;gap:12px;align-items:center">' +
+           '<div class="spin"></div><div><div style="font-weight:600;font-size:13px">Mengukur…</div>' +
+           '<div class="mono" style="font-size:11px;color:var(--dim);margin-top:3px">Sampel ' +
+           sampel.length + ' dari ' + target + ' · meleset ±' + Math.round(pos.coords.accuracy) + ' m' +
+           '</div></div></div>');
+    if (sampel.length >= target) selesai();
+  }, function () {
+    navigator.geolocation.clearWatch(pantau);
+    btn.disabled = false;
+    tampil('<div style="font-size:13px;color:var(--red400)">Lokasi gagal dibaca. Periksa izin lokasi browser.</div>',
+           'var(--red400)');
+  }, { enableHighAccuracy: true, timeout: 30000, maximumAge: 0 });
+
+  setTimeout(function () { if (sampel.length) selesai(); }, 35000);
+
+  var sudah = false;
+  function selesai() {
+    if (sudah) return;
+    sudah = true;
+    navigator.geolocation.clearWatch(pantau);
+    btn.disabled = false;
+
+    var lat = tengah(sampel.map(function (s) { return s.lat; }));
+    var lng = tengah(sampel.map(function (s) { return s.lng; }));
+    var akr = tengah(sampel.map(function (s) { return s.akr; }));
+
+    // Sebaran sampel menunjukkan seberapa stabil sinyal di titik ini
+    var jauh = 0;
+    sampel.forEach(function (s) {
+      var d = jarakMeter(lat, lng, s.lat, s.lng);
+      if (d > jauh) jauh = d;
+    });
+    var saran = Math.max(100, Math.ceil((akr + jauh + 30) / 25) * 25);
+
+    document.getElementById('st-lat').value = lat.toFixed(7);
+    document.getElementById('st-lng').value = lng.toFixed(7);
+
+    tampil('<div style="font-weight:600;font-size:13px;color:var(--em400);margin-bottom:9px">' +
+           '<i class="ph-fill ph-check-circle"></i> Selesai, ' + sampel.length + ' sampel</div>' +
+           '<div style="display:flex;justify-content:space-between;padding:4px 0"><span style="font-size:12px;color:var(--dim)">Ketelitian sinyal</span>' +
+           '<span class="mono" style="font-size:12px">±' + Math.round(akr) + ' m</span></div>' +
+           '<div style="display:flex;justify-content:space-between;padding:4px 0"><span style="font-size:12px;color:var(--dim)">Sebaran sampel</span>' +
+           '<span class="mono" style="font-size:12px">' + Math.round(jauh) + ' m</span></div>' +
+           '<div style="display:flex;justify-content:space-between;padding:4px 0"><span style="font-size:12px;color:var(--dim)">Radius disarankan</span>' +
+           '<span class="mono" style="font-size:12px;color:var(--em400)">' + saran + ' m</span></div>' +
+           '<p style="font-size:11px;color:var(--dim2);line-height:1.6;margin-top:9px">' +
+           'Koordinat sudah terisi di kolom atas. Periksa dulu lewat tombol "Periksa di peta", ' +
+           'baru tekan Simpan.</p>' +
+           '<button onclick="document.getElementById(\'st-radius\').value=' + saran + '" class="btn btn-sm" ' +
+           'style="margin-top:10px;background:var(--panel2);color:var(--em400);border:1px solid var(--line)">' +
+           'Pakai radius ' + saran + ' m</button>',
+           'rgba(47,230,166,.3)');
+  }
+}
+
+function tengah(arr) {
+  var a = arr.slice().sort(function (x, y) { return x - y; });
+  var t = Math.floor(a.length / 2);
+  return a.length % 2 ? a[t] : (a[t - 1] + a[t]) / 2;
+}
+
+function jarakMeter(lat1, lng1, lat2, lng2) {
+  var R = 6371000;
+  var f1 = lat1 * Math.PI / 180, f2 = lat2 * Math.PI / 180;
+  var df = (lat2 - lat1) * Math.PI / 180, dl = (lng2 - lng1) * Math.PI / 180;
+  var a = Math.sin(df / 2) * Math.sin(df / 2) +
+          Math.cos(f1) * Math.cos(f2) * Math.sin(dl / 2) * Math.sin(dl / 2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+/** Membaca koordinat dari tautan Google Maps atau teks koordinat biasa. */
+function bacaTempelan() {
+  var teks = document.getElementById('st-tempel').value.trim();
+  if (!teks) return pesan('Tempel tautan atau koordinat dulu', 'err');
+
+  var lat = null, lng = null;
+  var pola = [
+    /@(-?\d+\.\d+),(-?\d+\.\d+)/,          // .../@-8.6139,120.4654,17z
+    /[?&]q=(-?\d+\.\d+),\s*(-?\d+\.\d+)/,  // ...?q=-8.6139,120.4654
+    /!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/,      // ...!3d-8.6139!4d120.4654
+    /^(-?\d+\.\d+)\s*,\s*(-?\d+\.\d+)$/    // -8.6139, 120.4654
+  ];
+  for (var i = 0; i < pola.length; i++) {
+    var m = teks.match(pola[i]);
+    if (m) { lat = parseFloat(m[1]); lng = parseFloat(m[2]); break; }
+  }
+
+  if (lat === null) {
+    return pesan('Koordinat tidak ditemukan. Tempel tautan Google Maps lengkap, atau ketik langsung dengan format: -8.6139771, 120.4654074', 'err');
+  }
+  if (lat < -11 || lat > 6 || lng < 95 || lng > 141) {
+    return pesan('Koordinat ' + lat + ', ' + lng + ' di luar wilayah Indonesia. Periksa urutannya.', 'err');
+  }
+
+  document.getElementById('st-lat').value = lat.toFixed(7);
+  document.getElementById('st-lng').value = lng.toFixed(7);
+  document.getElementById('st-tempel').value = '';
+  pesan('Koordinat terbaca. Periksa di peta, lalu tekan Simpan.', 'ok');
+}
+
+function simpanLokasi() {
+  var lat = parseFloat(document.getElementById('st-lat').value);
+  var lng = parseFloat(document.getElementById('st-lng').value);
+  if (!isFinite(lat) || !isFinite(lng)) return pesan('Koordinat tidak valid', 'err');
+  sibuk('st-btn1', true);
+  panggil('simpanPengaturan', { pengaturan: {
+    namaKantor: document.getElementById('st-nama').value,
+    lat: lat, lng: lng,
+    radiusMeter: parseInt(document.getElementById('st-radius').value, 10) || 100,
+    wajibDalamRadius: document.getElementById('st-wajib-radius').checked,
+    wajibFoto: document.getElementById('st-wajib-foto').checked,
+    akurasiMaksimal: parseInt(document.getElementById('st-akurasi').value, 10) || 0,
+    lebarFoto: parseInt(document.getElementById('st-lebar').value, 10) || 480
+  } }).then(function (h) {
+    sibuk('st-btn1', false, 'Simpan pengaturan');
+    pesan(h.pesan, h.ok ? 'ok' : 'err');
+  }).catch(function (e) { sibuk('st-btn1', false, 'Simpan pengaturan'); pesan(e.message, 'err'); });
+}
+
+function simpanEmail() {
+  sibuk('st-btn2', true);
+  panggil('simpanPengaturan', { pengaturan: { emailAtasan: document.getElementById('st-email').value.trim() } })
+    .then(function (h) {
+      sibuk('st-btn2', false, 'Simpan email');
+      pesan(h.pesan, h.ok ? 'ok' : 'err');
+    }).catch(function (e) { sibuk('st-btn2', false, 'Simpan email'); pesan(e.message, 'err'); });
+}
+
+// ---------- Ekspor ----------
+function ekspor(jenis, bulan) {
+  pesan('Menyiapkan berkas…', 'inf');
+  panggil('eksporData', { jenis: jenis, bulan: bulan ? bulan.replace('_', '-') : null }).then(function (h) {
+    if (!h.ok) return pesan(h.pesan, 'err');
+    var blob = new Blob(['\ufeff' + h.csv], { type: 'text/csv;charset=utf-8;' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'hadirdex-' + jenis + '-' +
+                 (bulan || new Date().toISOString().substring(0, 10)) + '.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    pesan(h.jumlah + ' baris diunduh', 'ok');
+  }).catch(function (e) { pesan(e.message, 'err'); });
+}
+
+// ============================================================
+// REALTIME
+// ------------------------------------------------------------
+// Apps Script tidak punya WebSocket, jadi tidak ada push sejati.
+// Gantinya: server menyimpan satu nomor versi yang naik tiap ada
+// perubahan. Aplikasi menanyakan nomor itu tiap 30 detik — panggilan
+// yang tidak menyentuh Spreadsheet sama sekali — dan baru menarik
+// data lengkap kalau nomornya berubah. Polling berhenti saat tab
+// disembunyikan supaya kuota harian tidak habis percuma.
+// ============================================================
+var rt = { timer: null, versi: 0, jeda: 30000, sibuk: false, gagal: 0, antre: 0 };
+
+function mulaiRealtime() {
+  hentikanRealtime();
+  rt.timer = setInterval(detakRealtime, rt.jeda);
+}
+
+function hentikanRealtime() {
+  if (rt.timer) { clearInterval(rt.timer); rt.timer = null; }
+}
+
+function detakRealtime() {
+  if (!app.token || document.hidden) return;
+  if (rt.sibuk) return;
+  // Mengalah kalau ada permintaan pengguna yang sedang berjalan. Apps Script
+  // memproses permintaan satu akun secara berurutan, jadi polling yang
+  // menyelinap di tengah membuat aksi pengguna ikut mengantre.
+  if (rt.antre > 0) return;
+  rt.sibuk = true;
+  panggil('cekPerubahan', {}).then(function (h) {
+    rt.sibuk = false;
+    if (!h.ok) return;
+    rt.gagal = 0;
+    tandaHidup(true, h.waktu);
+    if (rt.versi && h.versi !== rt.versi) {
+      rt.versi = h.versi;
+      if (app.saya && app.saya.peran === 'admin') muatAdmin(true);
+      else muatBeranda();
+    } else {
+      rt.versi = h.versi;
+    }
+  }).catch(function () {
+    rt.sibuk = false;
+    rt.gagal++;
+    if (rt.gagal >= 3) tandaHidup(false);
+    // Mundur bertahap saat jaringan bermasalah, maksimal 2 menit
+    if (rt.gagal === 3) { rt.jeda = 60000; mulaiRealtime(); }
+    if (rt.gagal === 6) { rt.jeda = 120000; mulaiRealtime(); }
+  });
+}
+
+function tandaHidup(hidup, waktuServer) {
+  var t = document.getElementById('titik-hidup');
+  if (t) t.style.background = hidup ? 'var(--em400)' : 'var(--red400)';
+  var a = document.getElementById('rt-admin');
+  if (a) {
+    a.textContent = hidup ? 'Tersambung · ' + waktuServer : 'Sambungan putus';
+    a.style.color = hidup ? 'var(--em400)' : 'var(--red400)';
+  }
+  if (hidup && rt.jeda !== 30000) { rt.jeda = 30000; mulaiRealtime(); }
+}
+
+document.addEventListener('visibilitychange', function () {
+  if (!document.hidden && app.token) detakRealtime();
+});
+window.addEventListener('focus', function () { if (app.token) detakRealtime(); });
+
+// ============================================================
+// JAM & MULAI
+// ============================================================
+setInterval(function () {
+  var n = new Date();
+  var jam = ('0' + n.getHours()).slice(-2) + ':' + ('0' + n.getMinutes()).slice(-2);
+  var lengkap = jam + ':' + ('0' + n.getSeconds()).slice(-2);
+  ['jam-besar', 'jam-bar', 'jam-admin'].forEach(function (id, i) {
+    var e = document.getElementById(id);
+    if (e) e.textContent = i === 0 ? lengkap : jam;
+  });
+}, 1000);
+
+(function mulai() {
+  if (!app.url) return layar('s-setup');
+  if (!app.token) return layar('s-login');
+  // Dulu di sini dipanggil muatBeranda — berat, dan untuk admin datanya
+  // langsung dibuang karena admin butuh muatAdmin. Sekarang cukup satu
+  // panggilan ringan untuk memastikan sesinya masih sah.
+  panggil('cekPerubahan', {}).then(function (h) {
+    if (!h.ok || !h.pengguna) return layar('s-login');
+    app.saya = h.pengguna;
+    rt.versi = h.versi;
+    mulaiSesi();
+  }).catch(function () { layar('s-login'); });
+})();
+</script>
+</body>
+</html>
